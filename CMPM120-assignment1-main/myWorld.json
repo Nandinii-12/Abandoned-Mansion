@@ -1,0 +1,167 @@
+{
+    "title": "Abandoned Mansion",
+    "credits": "Created by Nandini Iyer (naiyer@ucsc.edu).",
+    "start": {"x": 2, "y": 2},
+    "exit": {"x": 4, "y": 6},
+    "rooms": {
+        "0_2": {
+            "name": "Library",
+            "description": "You enter a library with tall shelves filled with books. You start digging around to look for clues, and find a page with a bunch of numbers on it.",
+            "items": ["page_facing_up"],
+            "blockedMessage": "You cannot go on",
+            "fail": "There's not much to do here."
+        },
+        "0_3": {
+            "name": "Bathroom",
+            "description": "You enter a bathroom with a tiled floor and a large tub.",
+            "items": [],
+            "blockedMessage": "You cannot go on",
+            "fail": "There's not much to do here."
+        },
+        "0_4": {
+            "name": "Strange Hallway",
+            "description": "You reach a dead end and knock against the wall. It seems like there's something behind it, but you can't get past.",
+            "items": [],
+            "broken": true,
+            "new_description": "A pile of rubble sits on the ground, as a gaping hole shows a large secret study.",
+            "message": "The wall falls down with a crash, revealing a secret study behind it!",
+            "fail": "Nothing happens, maybe you need something to help you bring down this wall, like a hammer.",
+            "blockedMessage": "You cannot go on"
+        },
+        "0_5": {
+            "name": "Secret Study",
+            "description": "You step over the rubble and enter the study. You rummage through the drawers.",
+            "items": ["key"],
+            "requires": ["hammer"],
+            "blockedMessage": "A large wall blocks your path.",
+            "fail": "You open a book, before getting bored and promptly closing it."
+        },
+        "1_2": {
+            "name": "Hallway with Portraits",
+            "description": "You walk down a hallway. The walls are lined with large portraits.",
+            "items": [],
+            "blockedMessage": "You cannot go on",
+            "fail": "You look around at the portraits."
+        },
+        "1_4": {
+            "name": "Study",
+            "description": "You enter a study, with a large bookcase behind a wooden desk. It has a very homey feel to it.",
+            "items": ["notebook"],
+            "blockedMessage": "You cannot go on",
+            "fail": "You sit on the chair and swivel in it."
+        },
+        "2_0": {
+            "name": "Dim Corridor",
+            "description": "You enter a corridor with few candles lighting the walls. You try and look further but only see darkness.",
+            "new_description": "You switch on your flashlight, giving you some visibility for the rooms ahead of you.",
+            "items": [],
+            "lit": true,
+            "blockedMessage": "You cannot go on",
+            "fail": "You try and look beyond the darkness but can't seem to see anything. Maybe there's something in the mansion you can use.",
+            "message": "Your flashlight flickers on, lighting up your path"
+        },
+        "2_1": {
+            "name": "Ballroom",
+            "description": "You enter a massive ballroom with a grand piano lying abandoned on the side.",
+            "items": [],
+            "blockedMessage": "You cannot go on",
+            "fail": "You play some notes on the piano, and the room fills with sound just for a moment before it returns to silence."
+        },
+        "2_2": {
+            "name": "Empty Hall",
+            "description": "You look around a large empty room.",
+            "items": [],
+            "blockedMessage": "You cannot go on",
+            "fail": "There's not much to do here."
+        },
+        "2_3": {
+            "name": "Dining Room",
+            "description": "A grand dining table sits on front of you, a layer of dust sitting on it.",
+            "items": [],
+            "blockedMessage": "You cannot go on",
+            "fail": "You swipe some dust off the table and cough."
+        },
+        "2_4": {
+            "name": "Pantry",
+            "description": "Your stomach grumbles as you enter the Pantry. You look around and end up finding some bread.",
+            "items": ["baguette_bread"],
+            "blockedMessage": "You cannot go on",
+            "fail": "You eat some bread. It's a bit stale but it does the job."
+        },
+        "2_5": {
+            "name": "Empty Hallway",
+            "description": "It's just an empty hallway.",
+            "items": [],
+            "blockedMessage": "You cannot go on",
+            "fail": "There's not much to do here."
+        },
+        "2_6": {
+            "name": "Storage Closet",
+            "description": "You rummage around the closet to see if there's anything of use.",
+            "items": ["hammer"],
+            "blockedMessage": "You cannot go on",
+            "fail": "You nearly knock over a mop, and rest it against a wall."
+        },
+        "3_0": {
+            "name": "Dark Staircase",
+            "description": "You shine your flashlight to reveal a long staircase.",
+            "items": [],
+            "lit2": true,
+            "requires": ["flashlight", "battery"],
+            "blockedMessage": "A dark passage blocks your way.",
+            "fail": "You climb some stairs."
+        },
+        "3_2": {
+            "name": "Dimly Lit Room",
+            "description": "You enter a room lit by only a few candles. You look around and find a flashlight.",
+            "items": ["flashlight"],
+            "requires": ["page_facing_up"],
+            "blockedMessage": "A door with a number lock blocks your path.",
+            "fail": "There's not much to do here."
+        },
+        "3_5": {
+            "name": "Living Room",
+            "description": "You look around the room full of leather furniture. There doesn't seem to be much to do here except for a locked door",
+            "items": [],
+            "unlocked": true,
+            "new_description": "You look at the leather furniture, then at the open door, leading you to a short hallway",
+            "message":"The door opens with a click, revealing a small passageway.",
+            "fail": "You try and open the door with force but it doesn't budge.",
+            "blockedMessage": "You cannot go on"
+        },
+        "4_0": {
+            "name": "Dark Bedroom",
+            "description": "You enter a room lit only by your flashlight. It seems to have been a child's bedroom, decorated with bright colors and toys scattered on the floor. You find a pen on the floor and pick it up.",
+            "items": ["pen"],
+            "lit2": true,
+            "blockedMessage": "You cannot go on",
+            "fail": "You notice a large teddy bear in the corner of the room. You want to take it with you, but it's just too big."
+        },
+        "4_4": {
+            "name": "Electronics Room",
+            "description": "You enter a room filled with electronics: TVs, laptops, and more. You begin to go through the drawers and find a battery.",
+            "items": ["battery"],
+            "blockedMessage": "You cannot go on",
+            "fail": "You try and switch on the devices but nothing seems to work."
+        },
+        "4_5": {
+            "name": "Small Passage",
+            "description": "You enter a passage with two doors on either side of you. One of them is locked, with some sort of encrypted code.",
+            "new_description": "Light streams through the now open door, leading you to the outside of the mansion.",
+            "items": [],
+            "requires": ["key"], 
+            "decoded": true,
+            "blockedMessage": "You inspect the door in front of you and notice that you need a key to enter.",
+            "fail": "If only you had something to write with to help you crack the code.",
+            "message": "You frantically begin to write to try and crack the code. After what seems like forever, you jump to your feet and input the code!"
+        },
+        "4_6": {
+            "name": "Exit",
+            "description": "You walk away from the large mansion you were stuck inside and breathe a sigh of relief.",
+            "items": [],
+            "requires": ["notebook", "pen"],
+            "blockedMessage": "It seems you need to decode a message on a lock to leave.",
+            "fail": "There's not much to do here."
+        }
+    }
+}
